@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MountainView: View { // View는 화면, Struct는 구조? 특성?
-    var mountain: Mountain
+    @Binding var mountain: Mountain
     
     var body: some View { // View는 body를 필요로 함
         ScrollView {
@@ -11,6 +11,7 @@ struct MountainView: View { // View는 화면, Struct는 구조? 특성?
                         Image(systemName: "mountain.2.fill")
                         Spacer()
                         Button("즐겨찾기") {
+                            mountain.isFavorite.toggle()
                             print("즐겨찾기 클릭")
                         }
                     }
