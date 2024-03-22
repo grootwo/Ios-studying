@@ -8,18 +8,18 @@ struct MissionListView: View {
         var missions: [Mission] = [mission0, mission1]
         
         VStack {
-            NavigationSplitView {
+            NavigationStack {
                 List(missions, id: \.id) { mission in
                     HStack {
                         Image(mission.titleImageName)
                             .resizable()
                             .frame(width: 100, height: 100)
                             .cornerRadius(20)
-                        NavigationLink(mission.missionTitle, destination: MissionView(mission: mission))
+                        NavigationLink(mission.missionTitle, destination: MissionDetail(mission: mission))
                     }
                 }
-            } detail: {
-                // code
+            } .navigationDestination(for: Mission.self) { mission in
+                MissionDetail(mission: mission)
             }
         }
     }
