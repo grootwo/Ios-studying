@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MissionView: View {
+struct MissionDetail: View {
     var mission: Mission
     
     var body: some View {
