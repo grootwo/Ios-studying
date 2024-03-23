@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 @main
 struct MyApp: App {
