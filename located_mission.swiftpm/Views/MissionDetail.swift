@@ -29,7 +29,7 @@ struct MissionDetail: View {
                 Image(mission.titleImageName)
                     .resizable()
                     .cornerRadius(10)
-                    .frame(height: 400)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 300)
                 
                 HStack {
                     VStack(alignment: .leading) {
@@ -52,15 +52,14 @@ struct MissionDetail: View {
                 HStack {
                     Image(mission.correctImageName)
                         .resizable()
-                        .frame(width: 250, height: 250)
+                        .frame(width: .infinity, height: 250)
                         .cornerRadius(30)
                     Spacer()
                     Image(mission.wrongImageName)
                         .resizable()
-                        .frame(width: 250, height: 250)
+                        .frame(width: .infinity, height: 250)
                         .cornerRadius(30)
                 }
-                .padding()
         }
         }
         .padding(.horizontal, 30)
@@ -72,6 +71,7 @@ struct MissionDetail: View {
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             })
             .padding()
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
             .foregroundColor(.white)
             .background(Color.mint)
             .cornerRadius(30)
