@@ -10,12 +10,20 @@ struct MissionListView: View {
         VStack {
             NavigationStack {
                 List(missions, id: \.id) { mission in
-                    HStack {
-                        Image(mission.titleImageName)
-                            .resizable()
-                            .frame(width: 100, height: 100)
-                            .cornerRadius(20)
-                        NavigationLink(mission.missionTitle, destination: MissionDetail(mission: mission))
+                    NavigationLink(destination: MissionDetail(mission: mission)) {
+                        HStack {
+                            Image(mission.titleImageName)
+                                .resizable()
+                                .frame(width: 100, height: 100) // 크기 조정 필요
+                                .cornerRadius(20)
+                            VStack(alignment: .leading) {
+                                Text(mission.missionTitle)
+                                    .font(.title3)
+                                    .padding(.bottom, 10)
+                                Text(mission.missionInfo.prefix(10)) // 문장 끝에 점을 추가하고 싶음
+                                
+                            }
+                        }
                     }
                 }
             } .navigationDestination(for: Mission.self) { mission in
