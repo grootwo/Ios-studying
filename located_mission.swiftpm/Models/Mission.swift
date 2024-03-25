@@ -2,6 +2,7 @@ import SwiftUI
 
 struct Mission: Codable, Hashable, Identifiable {
     var id: Int
+    var isBookmarked: Bool
     var titleImageName: String
     var userImageName: String
     var correctImageName: String
