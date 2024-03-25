@@ -21,22 +21,26 @@ struct MakeMissionView: View {
     }
     
     var body: some View {
+        ScrollView {
+            
         VStack(alignment: .leading, spacing: 30) {
             if let image = image {
                             image
                                 .resizable()
-                                .clipShape(Circle())
-                                .frame(width: 120, height: 120)
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                                .frame(height: 200)
                         } else {
                             Image(systemName: "plus.viewfinder")
                                 .resizable()
-                                .foregroundColor(.blue)
-                                .frame(width: 120, height: 120)
+                                .foregroundColor(.mint)
+                                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                                .frame(height: 120)
                         }
             Button {
                             showImagePicker.toggle()
                         } label: {
-                            Text("Image Picker")
+                            Text("대표 사진 업로드하기")
+                                .foregroundStyle(Color.gray)
                         }
                         .sheet(isPresented: $showImagePicker, onDismiss: {
                             loadImage()
@@ -61,8 +65,20 @@ struct MakeMissionView: View {
                 text: $inputContent,
                 axis: .vertical
             )
+                Button(action: {
+                    print("미션 생성하기 클릭")
+                }, label: {
+                    Text("미션 생성하기")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                })
+                .padding()
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .foregroundColor(.white)
+                .background(Color.mint)
+                .cornerRadius(30)
         }
         .padding()
+    }
     }
 }
 
