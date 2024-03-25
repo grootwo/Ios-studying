@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MissionDetail: View {
-    var mission: Mission
+    @Binding var mission: Mission
     
     var body: some View {
         HStack {
@@ -15,11 +15,20 @@ struct MissionDetail: View {
             })
             Spacer()
             Button(action: {
+                mission.isBookmarked.toggle()
                 print("북마크 클릭")
-            }, label: {                    Image(systemName: "bookmark")
-                    .resizable()
-                    .frame(width: 20, height: 25)
-                    .foregroundColor(.mint)
+            }, label: {
+                if mission.isBookmarked {
+                    Image(systemName: "bookmark.fill")
+                        .resizable()
+                        .frame(width: 20, height: 25)
+                        .foregroundColor(.mint)
+                } else {
+                    Image(systemName: "bookmark")
+                        .resizable()
+                        .frame(width: 20, height: 25)
+                        .foregroundColor(.mint)
+                }
             })
         }
         .padding()
