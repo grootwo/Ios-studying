@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MakeMissionView: View {
+struct MakeReviewView: View {
     @State private var inputTitle: String = ""
     @State private var inputContent: String = ""
     
@@ -22,8 +22,9 @@ struct MakeMissionView: View {
     
     var body: some View {
         ScrollView {
+            
         VStack(alignment: .leading, spacing: 30) {
-            Text("새로운 미션 생성하기")
+            Text("후기 남기기")
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             if let image = image {
                             image
@@ -40,7 +41,7 @@ struct MakeMissionView: View {
             Button {
                             showImagePicker.toggle()
                         } label: {
-                            Text("대표 사진 업로드하기")
+                            Text("후기 사진 업로드하기")
                                 .foregroundStyle(Color.gray)
                         }
                         .sheet(isPresented: $showImagePicker, onDismiss: {
@@ -48,26 +49,15 @@ struct MakeMissionView: View {
                         }) {
                             ImagePicker(image: $selectedUIImage)
                     }
-            
-            
-            Text("미션 제목")
-                .font(.title3)
             TextField(
-                "미션 제목을 입력해주세요.",
-                text: $inputTitle,
-                axis: .vertical
-            )
-            Text("미션 내용")
-                .font(.title3)
-            TextField(
-                "미션 내용을 입력해주세요. 미션 내용은 참가자들이 이해할 수 있도록 자세히, 쉽게 설명해주세요.",
+                "후기를 입력해주세요. 느꼈던 감정이나 생각, 나누고 싶은 이야기 등을 자유롭게 작성하면 됩니다.",
                 text: $inputContent,
                 axis: .vertical
             )
                 Button(action: {
-                    print("미션 생성하기 클릭")
+                    print("후기 업로드하기 클릭")
                 }, label: {
-                    Text("미션 생성하기")
+                    Text("후기 업로드하기")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 })
                 .padding()
@@ -82,5 +72,5 @@ struct MakeMissionView: View {
 }
 
 #Preview {
-    SwiftUIView()
+    MakeReviewView()
 }

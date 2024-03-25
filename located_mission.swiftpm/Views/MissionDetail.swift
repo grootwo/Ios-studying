@@ -76,18 +76,17 @@ struct MissionDetail: View {
                         })
                     }
                     Spacer()
-                    Button(action: {
-                            print("미션 도전하기 클릭")
-                        }, label: {
-                            Text("미션 도전하기")
-                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        })
-                        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                        .frame(height: 70)
-                        .foregroundColor(.white)
-                        .background(Color.mint)
-                        .cornerRadius(30)
-                        .offset(y: 35)
+                    NavigationLink(destination: MakeReviewView()) {
+                        Text("미션 도전하기")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    }
+                    .padding()
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    .frame(height: 70)
+                    .foregroundColor(.white)
+                    .background(Color.mint)
+                    .cornerRadius(30)
+                    .offset(y: 35)
                 }
                 .padding()
                 
