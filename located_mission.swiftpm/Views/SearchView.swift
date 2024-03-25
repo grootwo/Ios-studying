@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct SwiftUIView: View {
+struct SearchView: View {
     var body: some View {
         NavigationView {
             ZStack {
@@ -79,5 +79,5 @@ struct SwiftUIView: View {
 }
 
 #Preview {
-    SwiftUIView()
+    SearchView()
 }

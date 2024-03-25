@@ -82,5 +82,5 @@ struct MakeMissionView: View {
 }
 
 #Preview {
-    SwiftUIView()
+    MakeMissionView()
 }

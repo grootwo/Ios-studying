@@ -5,7 +5,7 @@ import MapKit
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            MissionListView()
+            SearchView()
         }
     }
 }
