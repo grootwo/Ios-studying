@@ -12,12 +12,12 @@ struct MapLocation: Identifiable {
 }
 
 struct MapView: View {
-    @State var coordinate = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.789467, longitude: -122.416772), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @State var coordinate = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.1846343, longitude: 129.0434794), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
     
     let MapLocations = [
-            MapLocation(name: "St Francis Memorial Hospital", latitude: 37.789467, longitude: -122.416772),
-            MapLocation(name: "The Ritz-Carlton, San Francisco", latitude: 37.791965, longitude: -122.406903),
-            MapLocation(name: "Honey Honey Cafe & Crepery", latitude: 37.787891, longitude: -122.411223)
+        MapLocation(name: "C5", latitude: 36.0141447, longitude: 129.3257511),
+        MapLocation(name: "어린이 대공원", latitude: 35.1846343, longitude: 129.0434794),
+        MapLocation(name: "시민공원", latitude: 35.1681608, longitude: 129.0573853),
             ]
     
     var body: some View {
@@ -29,6 +29,7 @@ struct MapView: View {
            annotationContent: { location in
              MapMarker(coordinate: location.coordinate, tint: .red)
            }
+           
         )
     }
 }
