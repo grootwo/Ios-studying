@@ -43,6 +43,19 @@ struct MissionDetail: View {
                                 .frame(width: .infinity, height: 250)
                                 .cornerRadius(30)
                         }
+                        HStack {
+                            Image(systemName: "circle")
+                                .foregroundColor(.white)
+                                .background(Color.green)
+                                .frame(width: 30, height: 30)
+                            Spacer()
+                            Image(systemName: "xmark")
+                                .foregroundColor(.white)
+                                .background(Color.pink)
+                                .frame(width: 30, height: 30)
+                        }
+                        .offset(y: -80)
+                        .padding()
                     }
                 }
                 .padding(.horizontal, 30)
