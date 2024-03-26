@@ -1,18 +1,29 @@
 import SwiftUI
-
 import MapKit
 
-struct MapView: View {
-    var coordinate: CLLocationCoordinate2D
-    
-    var body: some View {
-        Map(position: .constant(.region(region)))
+struct IdentifiablePlace: Identifiable {
+    let id: UUID
+    let location: CLLocationCoordinate2D
+    init(id: UUID = UUID(), lat: Double, long: Double) {
+        self.id = id
+        self.location = CLLocationCoordinate2D(
+            latitude: lat,
+            longitude: long)
     }
-    
-    private var region: MKCoordinateRegion {
-        MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        )
+}
+
+
+struct MapView: View {
+    let place: IdentifiablePlace
+    @State var region: MKCoordinateRegion
+
+
+    var body: some View {
+        Map(coordinateRegion: $region,
+            annotationItems: [place])
+        { place in
+            MapMarker(coordinate: place.location,
+                   tint: Color.purple)
+        }
     }
 }

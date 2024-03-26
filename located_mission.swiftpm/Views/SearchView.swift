@@ -9,10 +9,11 @@ import SwiftUI
 import MapKit
 
 struct SearchView: View {
+    
     var body: some View {
         NavigationView {
             ZStack {
-                MapView(coordinate: CLLocationCoordinate2D(latitude: 36.0141447, longitude: 129.3257511))
+                MapView(place: IdentifiablePlace(lat: 36.0141447, long: 129.3257511), region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.0141447, longitude: 129.3257511), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)))
                 VStack {
                     HStack {
                         Button(action: {
