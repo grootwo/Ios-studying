@@ -42,7 +42,11 @@ struct MapView: View {
                MapAnnotation(
                   coordinate: location.coordinate,
                   content: {
-                      Image(systemName: "heart.circle.fill").foregroundColor(Color.random())
+                      Image(systemName: "heart.circle.fill"
+                      )
+                      .resizable()
+                      .frame(width: 35, height: 35)
+                      .foregroundColor(Color.random())
                      Text(location.name)
                   }
                )
