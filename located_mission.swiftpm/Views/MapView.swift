@@ -1,6 +1,18 @@
 import SwiftUI
 import MapKit
 
+public extension Color {
+
+    static func random(randomOpacity: Bool = false) -> Color {
+        Color(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1),
+            opacity: randomOpacity ? .random(in: 0...1) : 1
+        )
+    }
+}
+
 struct MapLocation: Identifiable {
     let id = UUID()
     let name: String
@@ -27,9 +39,14 @@ struct MapView: View {
            showsUserLocation: true,
            annotationItems: MapLocations,
            annotationContent: { location in
-             MapMarker(coordinate: location.coordinate, tint: .red)
+               MapAnnotation(
+                  coordinate: location.coordinate,
+                  content: {
+                      Image(systemName: "heart.circle.fill").foregroundColor(Color.random())
+                     Text(location.name)
+                  }
+               )
            }
-           
         )
     }
 }
