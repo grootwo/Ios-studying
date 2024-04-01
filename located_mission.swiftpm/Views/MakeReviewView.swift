@@ -21,7 +21,7 @@ struct MakeReviewView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
             VStack(alignment: .leading, spacing: 30) {
                 Text("후기 남기기")

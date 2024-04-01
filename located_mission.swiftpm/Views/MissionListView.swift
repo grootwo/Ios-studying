@@ -8,32 +8,30 @@ struct MissionListView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                    List(missions.indices) { index in
-                        NavigationLink(destination: MissionDetail(mission: $missions[index])) {
-                            HStack {
-                                Image(missions[index].titleImageName)
+        VStack {
+                List(missions.indices) { index in
+                    NavigationLink(destination: MissionDetail(mission: $missions[index])) {
+                        HStack {
+                            Image(missions[index].titleImageName)
+                                .resizable()
+                                .frame(width: 100, height: 100) // 크기 조정 필요
+                                .cornerRadius(20)
+                            VStack(alignment: .leading) {
+                                Text(missions[index].missionTitle)
+                                    .font(.title3)
+                                    .padding(.bottom, 10)
+                                Text(missions[index].missionInfo.prefix(10)) // 문장 끝에 점을 추가하고 싶음
+                            }
+                            Spacer()
+                            if missions[index].isBookmarked {
+                                Image(systemName: "bookmark.fill")
                                     .resizable()
-                                    .frame(width: 100, height: 100) // 크기 조정 필요
-                                    .cornerRadius(20)
-                                VStack(alignment: .leading) {
-                                    Text(missions[index].missionTitle)
-                                        .font(.title3)
-                                        .padding(.bottom, 10)
-                                    Text(missions[index].missionInfo.prefix(10)) // 문장 끝에 점을 추가하고 싶음
-                                }
-                                Spacer()
-                                if missions[index].isBookmarked {
-                                    Image(systemName: "bookmark.fill")
-                                        .resizable()
-                                        .frame(width: 20, height: 25)
-                                        .foregroundColor(.mint)
-                                }
+                                    .frame(width: 20, height: 25)
+                                    .foregroundColor(.mint)
                             }
                         }
-                    
-                }
+                    }
+                
             }
         }
     }
