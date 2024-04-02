@@ -11,26 +11,9 @@ import SwiftUI
 struct concepttutorialstudyingApp: App {
     var body: some Scene {
         #if os(iOS)
-        WindowGroup {
-            TabView {
-                ContentView()
-                    .tabItem {
-                        Label("Journal", systemImage: "book")
-                    }
-                SettingsView()
-                    .tabItem {
-                        Label("Settings", systemImage: "gear")
-                    }
-            }
-        }
+        MyScene()
         #elseif os(macOS)
-        WindowGroup {
-            AlternativeContentView()
-        }
-        
-        Settings {
-            SettingsView()
-        }
-        #endif
+        MyAlternativeScene()
+        #endif // MyAlternativeScene에서 endif를 작성했는데도 사용하는 이유를 모르겠다
     }
 }
