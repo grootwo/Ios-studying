@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct concepttutorialstudyingApp: App {
     var body: some Scene {
+        #if os(iOS)
         WindowGroup {
             TabView {
                 ContentView()
@@ -22,5 +23,14 @@ struct concepttutorialstudyingApp: App {
                     }
             }
         }
+        #elseif os(macOS)
+        WindowGroup {
+            AlternativeContentView()
+        }
+        
+        Settings {
+            SettingsView()
+        }
+        #endif
     }
 }
