@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyAlternativeFile: Scene {
+struct MyAlternativeScene: Scene {
     var body: some Scene {
         WindowGroup {
             AlternativeContentView()
