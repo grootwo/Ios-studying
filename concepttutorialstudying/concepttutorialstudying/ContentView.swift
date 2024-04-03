@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LazyVStack {
-            Image(systemName: "globe")
-                .imageScale(.medium)
-                .foregroundStyle(.primary)
-            Text("Hallo, freu mich!")
-        }
-        .padding([.top, .bottom], 30)
+        Text("This is Title")
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+            .foregroundStyle(.blue)
+        Text("This is footnote")
+            .font(.footnote)
+            .bold()
+            .fontDesign(.rounded)
     }
 }
 
