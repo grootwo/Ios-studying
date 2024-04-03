@@ -18,11 +18,14 @@ struct ContentView: View {
             .fontDesign(.rounded)
         HStack {
             Image(systemName: "thermometer.sun.fill")
-            Image(systemName: "arcade.stick.and.arrow.up.and.arrow.down")
-            Image(systemName: "globe.asia.australia.fill")
+            Image(systemName: "aqi.high")
+            Image(systemName: "waveform.badge.plus")
         }
         .symbolRenderingMode(.multicolor)
         .font(.largeTitle)
+        Label("This is a Label", systemImage: "bookmark.circle.fill")
+            .labelStyle(.titleAndIcon)
+            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
     }
 }
 
