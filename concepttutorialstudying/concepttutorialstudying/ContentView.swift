@@ -47,6 +47,17 @@ struct ContentView: View {
             }
             .progressViewStyle(.circular)
             .controlSize(.large)
+            Image("shark")
+                .resizable()
+                .scaledToFit()
+            VStack {
+                Rectangle()
+                    .foregroundColor(.yellow)
+                RoundedRectangle(cornerSize: CGSize(width: 200, height: 30), style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.green)
+                Circle()
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            }
         }
     }
 }
