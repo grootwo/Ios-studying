@@ -16,6 +16,13 @@ struct ContentView: View {
             .font(.footnote)
             .bold()
             .fontDesign(.rounded)
+        HStack {
+            Image(systemName: "thermometer.sun.fill")
+            Image(systemName: "arcade.stick.and.arrow.up.and.arrow.down")
+            Image(systemName: "globe.asia.australia.fill")
+        }
+        .symbolRenderingMode(.multicolor)
+        .font(.largeTitle)
     }
 }
 
