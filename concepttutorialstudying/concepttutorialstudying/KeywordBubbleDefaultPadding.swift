@@ -10,11 +10,12 @@ import SwiftUI
 struct KeywordBubbleDefaultPadding: View {
     let keyword: String
     let symbol: String
+    @ScaledMetric(relativeTo: .title) var paddingWidth = 30
     var body: some View {
         Label(keyword, systemImage: symbol)
             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             .foregroundColor(.white)
-            .padding()
+            .padding(paddingWidth)
             .background(.blue.opacity(0.8), in: Capsule())
     }
 }
