@@ -15,11 +15,10 @@ struct IfElseTrain: View {
             Image(systemName: "train.side.rear.car")
                 .resizable()
                 .scaledToFit()
-            if longerTrain {
-                Image(systemName: "train.side.middle.car")
-                    .resizable()
-                    .scaledToFit()
-            }
+            Image(systemName: "train.side.middle.car")
+                .resizable()
+                .scaledToFit()
+                .opacity(longerTrain ? 0 : 1)
             Image(systemName: "train.side.front.car")
                 .resizable()
                 .scaledToFit()
