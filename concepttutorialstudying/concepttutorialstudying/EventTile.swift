@@ -33,6 +33,18 @@ struct EventTile: View {
                 Text(event.location)
             }
         }
+        .padding()
+        .padding(.top, stripeHeight)
+        .background {
+            ZStack(alignment: .top) {
+                Rectangle()
+                    .opacity(0.5)
+                Rectangle()
+                    .frame(maxHeight: stripeHeight)
+            }
+            .foregroundColor(.green)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: stripeHeight, style: .continuous))
     }
 }
 
