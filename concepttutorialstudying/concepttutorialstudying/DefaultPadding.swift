@@ -14,10 +14,10 @@ struct DefaultPadding: View {
         HStack {
             TrainCar(.rear)
             TrainCar(.middle)
-                .padding()
-                .background(.green).opacity(0.5)
             TrainCar(.front)
         }
+        .padding()
+        .background(.green).opacity(0.5)
         TrainTrack()
     }
 }
