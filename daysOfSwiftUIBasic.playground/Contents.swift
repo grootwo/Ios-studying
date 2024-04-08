@@ -52,3 +52,14 @@ number -= 10
 print(number)
 
 print(100.isMultiple(of: 28))
+
+
+// doubl
+let intNum = 1
+var doubleNum = 1.0
+// print(intNum + doubleNum)
+print(Double(intNum) + doubleNum)
+print(intNum + Int(doubleNum))
+
+doubleNum += doubleNum
+print(doubleNum)
