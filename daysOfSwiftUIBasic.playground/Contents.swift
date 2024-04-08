@@ -54,7 +54,7 @@ print(number)
 print(100.isMultiple(of: 28))
 
 
-// doubl
+// double
 let intNum = 1
 var doubleNum = 1.0
 // print(intNum + doubleNum)
