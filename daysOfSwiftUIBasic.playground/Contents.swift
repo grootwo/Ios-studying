@@ -17,7 +17,6 @@ print(myCatName)
 
 
 // string
-
 let greeting = "Hallo, welcome to the \"swiftui\""
 print(greeting)
 print(greeting.count)
@@ -34,3 +33,22 @@ of an Apple engineer
 print(longText)
 print(fileName.uppercased())
 print(fileName.lowercased())
+
+
+// integer
+var number = 10
+
+var bigNumber = 1000000000
+bigNumber = 1_000_000_000
+bigNumber = 10_000___00000
+print(bigNumber)
+
+print(number + 2)
+print(number * 2)
+print(number / 2)
+print(number - 2)
+
+number -= 10
+print(number)
+
+print(100.isMultiple(of: 28))
