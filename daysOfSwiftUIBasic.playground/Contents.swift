@@ -74,3 +74,14 @@ awesomeCat.toggle()
 print(awesomeCat)
 awesomeCat != awesomeCat // 72 줄과 다른 의미
 print(awesomeCat)
+
+
+// join strings
+let subject = "시간이"
+let verb = "흘러가"
+let lyric = subject + " 어지러울 만큼 빠르게 " + verb
+print(lyric)
+
+let year = 2023
+let sentence1 = "This is " + String(year) + "!"
+let sentence2 = "This is \(year)!"
