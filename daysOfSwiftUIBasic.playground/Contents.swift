@@ -63,3 +63,14 @@ print(intNum + Int(doubleNum))
 
 doubleNum += doubleNum
 print(doubleNum)
+
+
+// booleans
+var awesomeCat = true
+let isDivider = 100.isMultiple(of: 3)
+
+awesomeCat = !awesomeCat
+awesomeCat.toggle()
+print(awesomeCat)
+awesomeCat != awesomeCat // 72 줄과 다른 의미
+print(awesomeCat)
