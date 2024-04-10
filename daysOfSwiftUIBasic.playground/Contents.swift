@@ -111,3 +111,18 @@ print(fruits)
 
 fruits.removeAll()
 print(fruits)
+
+
+// dictionary
+var someone = [String: String]()
+someone = [
+    "name": "ein person",
+    "country": "deutschland",
+]
+print("someone is called ", someone["name"], ", and lives in ", someone["country"], ".")
+
+someone["hobby"] = "Judo"
+someone["country"] = "한국"
+
+print(someone)
+print(someone["types", default: "unknown"])
