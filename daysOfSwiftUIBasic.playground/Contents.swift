@@ -126,3 +126,7 @@ someone["country"] = "한국"
 
 print(someone)
 print(someone["types", default: "unknown"])
+print(someone["swift"])
+print(someone.count)
+someone.removeAll()
+print(someone)
