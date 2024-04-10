@@ -141,3 +141,17 @@ print(animals)
 print(animals.count)
 print(animals.contains("donkey"))
 print(animals.sorted())
+
+
+// enum
+enum Month {
+    case January
+    case February
+    case March
+    case April
+    case May
+    case June
+    case July, August, September, October, November, December
+}
+var thisMonth = Month.April
+thisMonth = .May
