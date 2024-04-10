@@ -130,3 +130,14 @@ print(someone["swift"])
 print(someone.count)
 someone.removeAll()
 print(someone)
+
+
+// set
+var animals = Set<String>()
+animals = Set(["cat", "dog", "dog", "pig", "cow", "cow", "cow"])
+print(animals)
+animals.insert("chicken")
+print(animals)
+print(animals.count)
+print(animals.contains("donkey"))
+print(animals.sorted())
