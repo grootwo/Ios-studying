@@ -85,3 +85,29 @@ print(lyric)
 let year = 2023
 let sentence1 = "This is " + String(year) + "!"
 let sentence2 = "This is \(year)!"
+
+
+// array
+var cats: [String] = []
+var cats1 = Array<String>()
+var cats2 = [String]()
+cats.append("cheese")
+cats.append("tuxedo")
+cats.append("chaos")
+print(cats)
+print(cats[0])
+
+var fruits = ["Apple", "Banana", "Croissant", "Dragon fruit", "Papaya"]
+fruits.remove(at: 2)
+print(fruits)
+print(fruits.count)
+print(fruits.contains("Papaya"))
+
+fruits = fruits.reversed()
+print(fruits)
+
+fruits.sort()
+print(fruits)
+
+fruits.removeAll()
+print(fruits)
