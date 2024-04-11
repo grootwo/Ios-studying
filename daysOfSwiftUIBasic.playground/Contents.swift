@@ -156,3 +156,16 @@ enum Month {
 
 var thisMonth = Month.April
 thisMonth = .May
+
+
+// annotaion
+let example: String = "This is type annotation."
+var tempList: [String] = [String]()
+var tempDictionary: [String: String] = [String: String]()
+var tempSet: Set<String> = Set([])
+
+let username: String
+// lots of complex logic
+username = "@twostraws"
+// lots more complex logic
+print(username)
