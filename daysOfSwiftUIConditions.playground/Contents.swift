@@ -114,3 +114,18 @@ case 2:
 default:
     print("A partridge in a pear tree")
 }
+
+
+// ternary operator
+var haveWater = true
+print(haveWater ? "Let's drink water!" : "I'm thirsty")
+
+
+enum Theme {
+    case light, dark
+}
+
+let theme = Theme.dark
+
+let background = theme == .dark ? "black" : "white"
+print(background)
