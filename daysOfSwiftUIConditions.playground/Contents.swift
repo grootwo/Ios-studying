@@ -13,10 +13,10 @@ var name1 = "apple"
 var name2 = "banana"
 
 if name1 > name2 {
-    print("\(name1) -> \(name2)")
+    print("\(name2) -> \(name1)")
 }
 if name1 < name2 {
-    print("\(name2) -> \(name1)")
+    print("\(name1) -> \(name2)")
 }
 
 
