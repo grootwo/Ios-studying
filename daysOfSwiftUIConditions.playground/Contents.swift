@@ -140,3 +140,16 @@ for color in colors {
 for i in 1..<5 {
     print("This is number \(i)")
 }
+
+
+
+// while loop
+let winner = 1
+var picker = 0
+
+while picker == winner {
+    print("Sorry, \(picker) is not the winner!")
+    picker = Int.random(in: 1...10)
+}
+
+print("Now, 1 is the winner!")
