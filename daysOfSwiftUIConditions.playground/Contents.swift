@@ -153,3 +153,23 @@ while picker != winner {
 }
 
 print("Now, 1 is the winner!")
+
+
+
+// break, continue
+let filenames = ["work.txt", "sophie.jpg", "me.jpg", "logo.psd"]
+
+for filename in filenames {
+    if filename.hasSuffix(".jpg") {
+        print("First Founded picture: \(filename)")
+        break
+    }
+}
+
+
+for filename in filenames {
+    if !filename.hasSuffix(".jpg"){
+        continue
+    }
+    print("Founded picture: \(filename)")
+}
