@@ -147,7 +147,7 @@ for i in 1..<5 {
 let winner = 1
 var picker = 0
 
-while picker == winner {
+while picker != winner {
     print("Sorry, \(picker) is not the winner!")
     picker = Int.random(in: 1...10)
 }
