@@ -31,3 +31,32 @@ if members.count > 3 {
 if !members.isEmpty {
     print("Members are here!")
 }
+
+
+// else if, else
+enum Color {
+    case red, green, yellow
+}
+
+var color = Color.green
+
+if color == .red {
+    print("Don't go now")
+} else if color == .yellow {
+    print("Slow your pace")
+} else {
+    print("You may go")
+}
+
+
+// &&, ||
+var isWet = true
+var isCold = true
+var isSunny = false
+
+if isCold && isWet {
+    print("It can be winter!")
+    if !isSunny {
+        print("And it's cold!")
+    }
+}
