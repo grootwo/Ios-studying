@@ -129,3 +129,14 @@ let theme = Theme.dark
 
 let background = theme == .dark ? "black" : "white"
 print(background)
+
+
+// for loop
+let colors = ["red", "green", "yellow", "blue"]
+for color in colors {
+    print("This is \(color).")
+}
+
+for i in 1..<5 {
+    print("This is number \(i)")
+}
