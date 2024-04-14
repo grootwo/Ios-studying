@@ -54,3 +54,23 @@ func getIdNumbers2() -> (String, String) {
     return ("000101", "4111111")
 }
 print("\(getIdNumbers2().0)-\(getIdNumbers2().1)")
+
+
+// func with other parameter name
+func isSomeString(if string: String) {
+    if string == "some string" {
+        print("Yes it is some string!")
+    }
+}
+
+isSomeString(if: "some string")
+
+func is0(_ number: Int) {
+    if number == 0 {
+        print("Yes it is 0!")
+    } else {
+        print("No it is not 0!")
+    }
+}
+
+is0(3)
