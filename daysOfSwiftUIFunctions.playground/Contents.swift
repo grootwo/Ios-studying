@@ -49,3 +49,8 @@ print("\(firstNumbers2)-\(lastNumbers2)")
 
 let (firstNumbers3, _) = getIdNumbers()
 print("\(firstNumbers2)-*******")
+
+func getIdNumbers2() -> (String, String) {
+    return ("000101", "4111111")
+}
+print("\(getIdNumbers2().0)-\(getIdNumbers2().1)")
