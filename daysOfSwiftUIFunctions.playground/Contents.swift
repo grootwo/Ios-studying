@@ -74,3 +74,12 @@ func is0(_ number: Int) {
 }
 
 is0(3)
+
+
+// provide default values
+func sayHello(name: String = "Unkown") {
+    print("Hello, \(name)!")
+}
+
+sayHello()
+sayHello(name: "Juan")
