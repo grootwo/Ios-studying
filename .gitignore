@@ -8,6 +8,7 @@ playground.xcworkspace/
 
 DataPersistenceTest/
 DDayApp.xcodeproj/
+DDayAppTests/
 DDayAppUITests/
 ModelTest.xcodeproj/
 ModelTestUITests/
