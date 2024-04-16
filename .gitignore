@@ -5,6 +5,14 @@
 playground.xcworkspace/
 *.pbxproj
 
+DataPersistenceTest/
+DDayApp.xcodeproj/
+DDayAppUITests/
+ModelTest.xcodeproj/
+ModelTestUITests/
+StateBindingTest.xcodeproj/
+StateBindingTestTests/
+StateBindingTestUITests/
 
 # Xcode
 #
