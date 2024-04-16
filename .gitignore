@@ -4,6 +4,7 @@
 *.xcuserstate
 playground.xcworkspace/
 *.pbxproj
+*.xcplayground
 
 DataPersistenceTest/
 DDayApp.xcodeproj/
@@ -104,7 +105,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-CelsiusToFahrenheit.playground/playground.xcworkspace/xcuserdata/imhwido.xcuserdatad/UserInterfaceState.xcuserstate
 CelsiusToFahrenheit.playground/playground.xcworkspace/xcuserdata/imhwido.xcuserdatad/UserInterfaceState.xcuserstate
 located_mission.swiftpm/.swiftpm/xcode/package.xcworkspace/xcuserdata/imhwido.xcuserdatad/UserInterfaceState.xcuserstate
 printNumberOfArray.playground/playground.xcworkspace/xcuserdata/imhwido.xcuserdatad/UserInterfaceState.xcuserstate
