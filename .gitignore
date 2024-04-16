@@ -3,6 +3,8 @@
 *.xcworkspacedata
 *.xcuserstate
 playground.xcworkspace/
+*.pbxproj
+
 
 # Xcode
 #
