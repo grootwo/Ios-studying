@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var names = ["world", "Hallo", "Groo"]
-    @State var index = 0
+    @State var showModal = false
     var body: some View {
         VStack {
-            Text("Hello, \(names[index])!")
-            Button(action: {
-                if index == names.count - 1 {
-                    index = 0
-                } else {
-                    index += 1
-                }
-            }, label: {
-                Text("Change name")
-            })
+            Button("show modal") {
+                showModal.toggle()
+            }
         }
         .padding()
+        .sheet(isPresented: $showModal, content: {
+            ModalChild(showModal: $showModal)
+        })
+    }
+}
+
+struct ModalChild: View {
+    @Binding var showModal: Bool
+    var body: some View {
+        VStack {
+            Text("child")
+            Button("close") {
+                showModal = false
+            }
+        }
     }
 }
 
