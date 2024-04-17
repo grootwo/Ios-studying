@@ -1,5 +1,17 @@
 import Cocoa
 
 // closures
-// 노 리턴, 리턴, 변수에 함수 지정, 함수에 함수 지정,
+let sayHello = {
+    print("Hello!")
+}
+sayHello()
+
+let greeting: () -> Void = sayHello
+greeting()
+
+
+let sayName = { (name: String) -> String in
+    "Hello, \(name)"
+}
+print(sayName("sweet little kitty"))
 
