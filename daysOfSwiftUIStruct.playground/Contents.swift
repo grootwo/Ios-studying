@@ -63,3 +63,17 @@ var knittinClub = Club()
 knittinClub.members.append("Groo")
 knittinClub.members.append("Cheese Cat")
 knittinClub.members.append("White Elephant")
+
+
+struct Time {
+    var time: Date
+    var timeString: String
+    
+    init(time: Date) {
+        self.time = time
+        timeString = time.formatted(date: .omitted, time: .standard)
+    }
+}
+
+var time1 = Time(time: Date())
+print(time1.timeString)
