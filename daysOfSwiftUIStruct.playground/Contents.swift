@@ -43,3 +43,23 @@ var archer = Employee(name: "Sterling Archer", vacationAllocated: 14)
 archer.vacationTaken += 4
 archer.vacationRemaining = 5
 print(archer.vacationAllocated)
+
+
+struct Club {
+    var members = ["me"] {
+        willSet {
+            print("Current members are: \(members)")
+            print("New member will be: \(newValue)")
+        }
+
+        didSet {
+            print("There are now \(members.count) members.")
+            print("Former member list was \(oldValue)")
+        }
+    }
+}
+
+var knittinClub = Club()
+knittinClub.members.append("Groo")
+knittinClub.members.append("Cheese Cat")
+knittinClub.members.append("White Elephant")
