@@ -1,5 +1,7 @@
 import Cocoa
 
+
+// struct
 struct Player {
     let team: String
     var hp: Int
@@ -77,3 +79,27 @@ struct Time {
 
 var time1 = Time(time: Date())
 print(time1.timeString)
+
+
+// access control
+struct Refrigerator {
+    private(set) var apples = 0
+    
+    mutating func storeApples(count: Int) {
+        apples += count
+    }
+    mutating func eatApples(count: Int) -> Bool {
+        if count > apples {
+            return false
+        } else {
+            apples -= count
+            return true
+        }
+    }
+}
+
+var oneRefrigerator = Refrigerator()
+oneRefrigerator.storeApples(count: 5)
+if oneRefrigerator.eatApples(count: 3) {
+    print("Now we have \(oneRefrigerator.apples) apples in the refrigerator")
+}
