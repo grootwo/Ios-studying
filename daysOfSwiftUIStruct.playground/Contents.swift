@@ -103,3 +103,16 @@ oneRefrigerator.storeApples(count: 5)
 if oneRefrigerator.eatApples(count: 3) {
     print("Now we have \(oneRefrigerator.apples) apples in the refrigerator")
 }
+
+
+// static property
+struct House {
+    static var members: [String] = []
+    
+    static func addMember(newMember: String) {
+        members.append(newMember)
+    }
+}
+
+House.addMember(newMember: "a cat")
+print(House.members)
