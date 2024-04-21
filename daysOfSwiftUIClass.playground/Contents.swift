@@ -48,3 +48,21 @@ class Armchair: Chair {
 }
 
 var newArmChair = Armchair(isNeeded: true, isComfortable: false)
+
+
+// copy
+class Cat {
+    var age = 0
+    
+    func copy() -> Cat {
+        var newCat = Cat()
+        newCat.age = self.age
+        return newCat
+    }
+}
+
+var cat1 = Cat()
+var cat2 = cat1.copy()
+cat2.age = 3
+print(cat1.age)
+print(cat2.age)
