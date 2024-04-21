@@ -5,15 +5,16 @@ class Person {
     init(hours: Int) {
         self.hours = hours
     }
-}
-
-class Baby: Person {
     func sleep() {
-        print("I sleep for \(hours) hours. Wah!")
+        print("I sleep for \(hours) hours.")
     }
 }
 
+class Baby: Person {
+}
+
 class Teenager: Person {
+    override
     func sleep() {
         print("I sleep for \(hours) hours. Yay!")
     }
