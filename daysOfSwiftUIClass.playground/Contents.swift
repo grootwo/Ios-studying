@@ -86,3 +86,18 @@ for i in 1...3 {
     let user = User(id: i)
     print("User \(user.id): I'm in control!")
 }
+
+
+//
+class Human {
+    var name = "Paul"
+}
+
+let human1 = Human()
+human1.name = "Taylor"
+print(human1.name)
+
+var human2 = Human()
+human2.name = "Taylor"
+human2 = Human()
+print(human2.name)
