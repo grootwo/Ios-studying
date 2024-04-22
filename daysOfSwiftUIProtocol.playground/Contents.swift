@@ -75,3 +75,35 @@ extension Book {
 
 var book1 = Book(title: "book 1", pageCount: 30, readingHours: 1)
 var book2 = Book(title: "book 2", pageCount: 100)
+
+
+// protocol extension
+extension Collection {
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+}
+
+let guests = ["Mario", "Luigi", "Peach"]
+
+if guests.isNotEmpty {
+    print("Guest count: \(guests.count)")
+}
+
+protocol Person {
+    var name: String { get }
+    func sayHello()
+}
+
+extension Person {
+    func sayHello() {
+        print("Hi, I'm \(name)")
+    }
+}
+
+struct Employee: Person {
+    let name: String
+}
+
+let sam = Employee(name: "Sam Bla")
+sam.sayHello()
