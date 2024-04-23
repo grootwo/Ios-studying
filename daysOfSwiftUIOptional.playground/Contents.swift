@@ -15,3 +15,17 @@ if let number = number {
 //if number > 10 {
 //    print("\(number) is bigger than 10. (3)")
 //}
+
+
+// guard let
+func checkStringHasValue(textInput: String?) {
+    guard let textInput = textInput else {
+        print("There is no text.")
+        return
+    }
+    
+    print("'\(textInput)' is input.")
+}
+
+checkStringHasValue(textInput: nil)
+checkStringHasValue(textInput: "")
