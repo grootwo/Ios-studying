@@ -52,3 +52,20 @@ struct Book {
 let book1: Book? = nil
 let authorOfBook1 = book1?.author?.first?.uppercased() ?? "U"
 print(authorOfBook1)
+
+
+// handle failure with optional
+enum UserError: Error {
+    case badID, networkFailed
+}
+
+func getUser(id: Int) throws -> String {
+    throw UserError.networkFailed
+}
+
+if let user = try? getUser(id: 23) {
+    print("User: \(user)")
+}
+
+let user = (try? getUser(id: 23)) ?? "Anonymous"
+print(user)
