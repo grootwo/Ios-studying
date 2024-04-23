@@ -41,3 +41,14 @@ var computer1 = Computer(user: "user1", model: "macbook pro 1")
 var computer2 = Computer(user: nil, model: "macbook pro 2")
 let user2 = computer2.user ?? "unknown"
 print(user2)
+
+
+// optional changing
+struct Book {
+    var title: String
+    var author: String?
+}
+
+let book1: Book? = nil
+let authorOfBook1 = book1?.author?.first?.uppercased() ?? "U"
+print(authorOfBook1)
