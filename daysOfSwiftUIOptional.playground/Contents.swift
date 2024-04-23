@@ -29,3 +29,15 @@ func checkStringHasValue(textInput: String?) {
 
 checkStringHasValue(textInput: nil)
 checkStringHasValue(textInput: "")
+
+
+// nil coalescing
+struct Computer {
+    var user: String?
+    var model: String
+}
+
+var computer1 = Computer(user: "user1", model: "macbook pro 1")
+var computer2 = Computer(user: nil, model: "macbook pro 2")
+let user2 = computer2.user ?? "unknown"
+print(user2)
