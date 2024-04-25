@@ -56,16 +56,20 @@ print(authorOfBook1)
 
 // handle failure with optional
 enum UserError: Error {
-    case badID, networkFailed
+    case tooBig
 }
 
-func getUser(id: Int) throws -> String {
-    throw UserError.networkFailed
+func getUser(id: Int) throws -> String{
+    if id > 100 {
+        throw UserError.tooBig
+    } else {
+        return "Appropriate id"
+    }
 }
 
-if let user = try? getUser(id: 23) {
+if let user = (try? getUser(id: 100)) {
     print("User: \(user)")
 }
 
-let user = (try? getUser(id: 23)) ?? "Anonymous"
+let user = (try? getUser(id: 1000)) ?? "Anonymous"
 print(user)
