@@ -7,26 +7,34 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var text1: some View {
-        Text("this is text1")
-    }
-    let text2 = Text("this is text2")
-    var text3: some View {
-        Group {
-            Text("this is text3")
-            Text("this is text3")
+struct Watermark: ViewModifier {
+    var text: String
+
+    func body(content: Content) -> some View {
+        ZStack(alignment: .topLeading) {
+            content
+            Text(text)
+                .font(.caption)
+                .foregroundStyle(.white)
+                .padding(5)
+                .background(.black.opacity(0.5))
         }
     }
-    @ViewBuilder var text4: some View {
-        Text("this is text4")
-        Text("this is text4")
+}
+
+extension View {
+    func watermarked(with text: String) -> some View {
+        modifier(Watermark(text: text))
     }
+}
+
+struct ContentView: View {    
     var body: some View {
-        text1
-        text2
-        text3
-        text4
+        Image(systemName: "pencil")
+            .resizable()
+            .scaledToFit()
+            .watermarked(with: "This is watermark")
+            .padding()
     }
 }
 
