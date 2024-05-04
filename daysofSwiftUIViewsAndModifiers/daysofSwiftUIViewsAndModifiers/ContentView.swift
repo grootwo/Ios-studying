@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showRedBackground = false
     var body: some View {
         Button(action: {
-            print(type(of: self.body))
+            showRedBackground.toggle()
         }, label: {
             Text("This is a Text")
         })
             .font(.largeTitle)
-            .frame(width: 300, height: 300)
-            .background(.green)
+            .foregroundColor(showRedBackground ? .red : .green)
     }
 }
 
