@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Watermark: ViewModifier {
     var text: String
-
+    
     func body(content: Content) -> some View {
         ZStack(alignment: .topLeading) {
             content
@@ -22,19 +22,44 @@ struct Watermark: ViewModifier {
     }
 }
 
+struct BlueTitle: ViewModifier {
+    var text: String
+    func body(content: Content) -> some View {
+        VStack {
+            Text(text)
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .foregroundStyle(.blue)
+            content
+        }
+    }
+}
+
 extension View {
     func watermarked(with text: String) -> some View {
         modifier(Watermark(text: text))
     }
+    func blueTitle(text: String) -> some View {
+        modifier(BlueTitle(text: text))
+    }
 }
 
-struct ContentView: View {    
+struct ContentView: View {
     var body: some View {
-        Image(systemName: "pencil")
-            .resizable()
-            .scaledToFit()
-            .watermarked(with: "This is watermark")
-            .padding()
+        VStack {
+            Image(systemName: "pencil")
+                .resizable()
+                .scaledToFit()
+                .watermarked(with: "This is watermark")
+            Image(systemName: "square.and.pencil.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .blueTitle(text: "pencil")
+            Image(systemName: "paperplane.circle")
+                .resizable()
+                .scaledToFit()
+                .blueTitle(text: "paperplane")
+        }
+        .padding()
     }
 }
 
