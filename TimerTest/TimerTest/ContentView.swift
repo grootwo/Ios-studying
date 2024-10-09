@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isTicking = false
+    @State private var time = 0
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("\(time)")
+                .font(.largeTitle)
+            Button(isTicking ? "Pause" : "Start") {
+                isTicking.toggle()
+            }
+            .font(.title)
+            .buttonStyle(.borderedProminent)
+            Button("Stop") {
+                
+            }
+            .font(.title)
+            .buttonStyle(.borderedProminent)
+            .tint(.secondary)
         }
         .padding()
     }
