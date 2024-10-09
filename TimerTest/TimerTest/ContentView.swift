@@ -9,18 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isTicking = false
-    @State private var time = 0
+    @State private var timeCounting = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
-            Text("\(time)")
+            Text("\(timeCounting)")
                 .font(.largeTitle)
+                .onReceive(timer) { time in
+                    if isTicking {
+                        timeCounting += 1
+                    }
+                }
             Button(isTicking ? "Pause" : "Start") {
                 isTicking.toggle()
             }
             .font(.title)
             .buttonStyle(.borderedProminent)
             Button("Stop") {
-                
+                isTicking = false
+                timeCounting = 0
             }
             .font(.title)
             .buttonStyle(.borderedProminent)
